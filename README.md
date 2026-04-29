@@ -1,5 +1,5 @@
-# debug-systems.github.io
+# Debugging Systems
 
-Site institucional da Debugging Systems, publicado via GitHub Pages.
+Página institucional — tecnologia e IA para automatizar, criar e escalar negócios.
 
-URL: https://debug-systems.github.io
+Publicada em [debug-systems.github.io](https://debug-systems.github.io).

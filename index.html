@@ -3,119 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="SEU_CODIGO_AQUI" />
   <title>Debugging Systems</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
+      background: #0a0a0a;
+      color: #e8e8e8;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
     }
 
-    .card {
-      max-width: 560px;
-      width: 100%;
+    header {
+      padding: 3rem 2rem 2rem;
       text-align: center;
+      border-bottom: 1px solid #1e1e1e;
     }
 
     .logo {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #58a6ff;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #4ade80;
     }
 
     .tagline {
-      font-size: 1.1rem;
-      color: #8b949e;
-      margin-bottom: 2.5rem;
+      margin-top: 0.75rem;
+      font-size: 1.05rem;
+      color: #888;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.6;
     }
 
-    .divider {
-      border: none;
-      border-top: 1px solid #21262d;
-      margin: 2rem 0;
+    main {
+      flex: 1;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 2rem;
     }
 
     .section-title {
       font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #8b949e;
-      margin-bottom: 1rem;
+      color: #4ade80;
+      margin-bottom: 1.5rem;
     }
 
     .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: #4ade80;
+    }
+
+    .service-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card p {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .contact-section {
+      border-top: 1px solid #1e1e1e;
+      padding-top: 2rem;
+    }
+
+    .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-bottom: 2rem;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
-    .tag {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 2rem;
-      padding: 0.4rem 1rem;
-      font-size: 0.875rem;
-      color: #c9d1d9;
-    }
-
-    .contact {
-      font-size: 0.9rem;
-      color: #8b949e;
-    }
-
-    .contact a {
-      color: #58a6ff;
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 0.55rem 1rem;
+      font-size: 0.85rem;
+      color: #ccc;
       text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
+    .contact-links a:hover {
+      border-color: #4ade80;
+      color: #ffffff;
     }
 
     footer {
-      margin-top: 3rem;
+      text-align: center;
+      padding: 1.5rem;
       font-size: 0.75rem;
-      color: #484f58;
+      color: #333;
+      border-top: 1px solid #1a1a1a;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">Debugging Systems</div>
-    <p class="tagline">Automação, bots e integrações para negócios.</p>
 
-    <hr class="divider" />
+  <header>
+    <div class="logo">Debugging<span>Systems</span></div>
+    <p class="tagline">Tecnologia e IA para automatizar, criar e escalar o seu negócio.</p>
+  </header>
 
-    <p class="section-title">Serviços</p>
+  <main>
+    <p class="section-title">O que fazemos</p>
     <div class="services">
-      <span class="tag">Bots WhatsApp</span>
-      <span class="tag">Bots Telegram</span>
-      <span class="tag">Automação de processos</span>
-      <span class="tag">Integrações de API</span>
-      <span class="tag">Firebase &amp; Cloud</span>
+      <div class="service-card">
+        <h3>Automação com IA</h3>
+        <p>Fluxos inteligentes com n8n, Python e JavaScript para eliminar tarefas manuais.</p>
+      </div>
+      <div class="service-card">
+        <h3>Conteúdo para Redes Sociais</h3>
+        <p>Criação de vídeos, imagens e textos com IA para Instagram, TikTok e YouTube.</p>
+      </div>
+      <div class="service-card">
+        <h3>Engenharia de Prompt</h3>
+        <p>Prompts otimizados para geração de imagens, vídeos e conteúdos com resultados profissionais.</p>
+      </div>
+      <div class="service-card">
+        <h3>Desenvolvimento de Bots e Páginas</h3>
+        <p>Bots para WhatsApp, automações via API e páginas web com Flask e JavaScript.</p>
+      </div>
     </div>
 
-    <hr class="divider" />
-
-    <p class="contact">
-      Contato:
-      <a href="mailto:contato@debugging.systems">contato@debugging.systems</a>
-    </p>
-  </div>
+    <div class="contact-section">
+      <p class="section-title">Contato</p>
+      <div class="contact-links">
+        <a href="mailto:debuggingsystems@gmail.com">
+          ✉ debuggingsystems@gmail.com
+        </a>
+        <a href="https://www.instagram.com/ro.tina.imperfeita/" target="_blank" rel="noopener">
+          ◎ @ro.tina.imperfeita
+        </a>
+        <a href="https://www.instagram.com/carrinhopronto/" target="_blank" rel="noopener">
+          ◎ @carrinhopronto
+        </a>
+      </div>
+    </div>
+  </main>
 
   <footer>&copy; 2026 Debugging Systems</footer>
+
 </body>
 </html>
